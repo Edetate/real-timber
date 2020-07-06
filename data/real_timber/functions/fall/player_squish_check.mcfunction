@@ -1,0 +1,1 @@
+execute as @a[distance=..1,nbt=!{Health:0.0f}] run function real_timber:fall/player_squish

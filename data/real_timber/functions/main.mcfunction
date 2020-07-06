@@ -1,0 +1,1 @@
+execute as @a[predicate=real_timber:log_mined] at @s run function real_timber:trigger/log_mined
