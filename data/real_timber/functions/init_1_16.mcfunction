@@ -3,5 +3,5 @@ scoreboard objectives add rt_strip_crim minecraft.mined:minecraft.stripped_crims
 scoreboard objectives add rt_warp_stem minecraft.mined:minecraft.warped_stem
 scoreboard objectives add rt_strip_warp minecraft.mined:minecraft.stripped_warped_stem
 
-scoreboard objectives add rt_warped_fungus minecraft.used:minecraft.warped_fungus
-scoreboard objectives add rt_crimson_fungus minecraft.used:minecraft.crimson_fungus
+scoreboard objectives add rt_warp_fungus minecraft.used:minecraft.warped_fungus
+scoreboard objectives add rt_crim_fungus minecraft.used:minecraft.crimson_fungus

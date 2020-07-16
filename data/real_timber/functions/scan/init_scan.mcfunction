@@ -7,6 +7,7 @@ scoreboard players set $min_z_div rt_scan_limit 0
 scoreboard players operation $min_x_div rt_scan_limit -= $max_x_div rt_scan_limit
 scoreboard players operation $min_z_div rt_scan_limit -= $max_z_div rt_scan_limit
 
+execute unless score $CLIMATE_CHANGE rt_boolean matches 2 at @s run function real_timber:climate_change/calculate
 
 scoreboard players set $blocks_scanned rt_scan_limit 0
 scoreboard players add $id_pool rt_build_id 1

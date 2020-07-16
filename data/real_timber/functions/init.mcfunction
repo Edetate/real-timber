@@ -29,7 +29,7 @@ scoreboard objectives add rt_spruce_sapl minecraft.used:minecraft.spruce_sapling
 scoreboard objectives add rt_acacia_sapl minecraft.used:minecraft.acacia_sapling
 scoreboard objectives add rt_jungle_sapl minecraft.used:minecraft.jungle_sapling
 
-scoreboard objectives add rt_sapling_count dummy
+scoreboard objectives add rt_climat_factor dummy
 
 function real_timber:init_1_16
 
@@ -48,10 +48,11 @@ execute unless score $MAX_NUMBER_OF_BLOCKS_ANIMATED rt_scan_limit matches 1.. ru
 execute unless score $MAX_NUMBER_OF_BLOCKS_HARVESTED rt_scan_limit matches 1.. run scoreboard players set $MAX_NUMBER_OF_BLOCKS_HARVESTED rt_scan_limit 800
 
 #for the booleans: 1 is true, 2 is false
-execute unless score $DO_DEADLY_EFFECTS rt_boolean matches 1.. run scoreboard players set $DO_DEADLY_EFFECTS 1
-execute unless score $REQUIRE_SNEAKING rt_boolean matches 1.. run scoreboard players set $REQUIRE_SNEAKING 1
-execute unless score $TAKE_HUNGER rt_boolean matches 1.. run scoreboard players set $TAKE_HUNGER 1
-execute unless score $DO_SPIRITS rt_boolean matches 1.. run scoreboard players set $DO_SPIRITS 1
+execute unless score $DO_DEADLY_EFFECTS rt_boolean matches 1.. run scoreboard players set $DO_DEADLY_EFFECTS rt_boolean 1
+execute unless score $REQUIRE_SNEAKING rt_boolean matches 1.. run scoreboard players set $REQUIRE_SNEAKING rt_boolean 1
+execute unless score $TAKE_HUNGER rt_boolean matches 1.. run scoreboard players set $TAKE_HUNGER rt_boolean 1
+execute unless score $DO_SPIRITS rt_boolean matches 1.. run scoreboard players set $DO_SPIRITS rt_boolean 1
+execute unless score $CLIMATE_CHANGE rt_boolean matches 1.. run scoreboard players set $CLIMATE_CHANGE rt_boolean 1
 
 #maxCommandChainLength should be at least $MAX_NUMBER_OF_BLOCKS_ANIMATED * 50
 gamerule maxCommandChainLength 70000

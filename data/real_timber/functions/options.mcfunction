@@ -15,6 +15,9 @@ execute unless score $TAKE_HUNGER rt_boolean matches 2 run tellraw @s [{"text":"
 execute if score $DO_SPIRITS rt_boolean matches 2 run tellraw @s [{"text":" * Spirits are OFF. Click to turn on.","color":"red","bold":true,"clickEvent":{"action":"run_command","value":"/function real_timber:options/turn_spirits_on"}}]
 execute unless score $DO_SPIRITS rt_boolean matches 2 run tellraw @s [{"text":" * Spirits are ON. Click to turn off.","color":"green","bold":true,"clickEvent":{"action":"run_command","value":"/function real_timber:options/turn_spirits_off"}}]
 
+execute if score $CLIMATE_CHANGE rt_boolean matches 2 run tellraw @s [{"text":" * Climate change is OFF. Click to turn on.","color":"red","bold":true,"clickEvent":{"action":"run_command","value":"/function real_timber:options/turn_climate_on"}}]
+execute unless score $CLIMATE_CHANGE rt_boolean matches 2 run tellraw @s [{"text":" * Climate change is ON. Click to turn off.","color":"green","bold":true,"clickEvent":{"action":"run_command","value":"/function real_timber:options/turn_climate_off"}}]
+
 execute store result storage edta_rt_storage gr_cmd_fb byte 1 run gamerule sendCommandFeedback
 gamerule sendCommandFeedback false
 schedule function real_timber:options/restore_gamerule 1
