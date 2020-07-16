@@ -1,0 +1,25 @@
+{
+  "type": "generic",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "item",
+          "weight": 1,
+          "name": "minecraft:wooden_axe",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": 1
+            },
+            {
+              "function": "set_nbt",
+              "tag": "{display:{Name:'{\"text\":\"Spirit Axe\",\"color\":\"dark_green\",\"bold\":true}',Lore:['{\"text\":\"Auto-Plant\",\"color\":\"green\",\"italic\":true}']},autoPlant:1b}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

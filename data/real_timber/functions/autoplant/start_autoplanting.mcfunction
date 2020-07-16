@@ -1,0 +1,1 @@
+execute as @e[type=minecraft:area_effect_cloud,tag=edta_real_timber,tag=auto_plant,nbt={Age:63}] at @s run function real_timber:autoplant/autoplant

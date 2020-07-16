@@ -30,6 +30,6 @@ execute if score $rt_climate_factor rt_climat_factor matches 100..250 if score $
 execute if score $rt_climate_factor rt_climat_factor matches 251..500 if predicate real_timber:30percentchance run tellraw @s [{"text":"It really seems to be warmer than it should be, this time of the year. And where are all the trees?","color":"gold"},{"text":" [?]","color":"gold","bold":true,"clickEvent":{"action":"run_command","value":"/function real_timber:climate_change/get_temperature"}}]
 execute if score $rt_climate_factor rt_climat_factor matches 501.. if predicate real_timber:30percentchance run tellraw @s [{"text":"It's so hot!! Maybe we were a bit careless and should have planted more trees.","color":"gold"},{"text":" [?]","color":"gold","bold":true,"clickEvent":{"action":"run_command","value":"/function real_timber:climate_change/get_temperature"}}]
 
-execute if score $rt_climate_factor rt_climat_factor matches 120..250 if predicate real_timber:10percentchance run summon minecraft:small_fireball ~ ~1 ~ {Motion:[0.0d,-1.0d,0.0d]}
-execute if score $rt_climate_factor rt_climat_factor matches 251..500 if predicate real_timber:30percentchance run summon minecraft:small_fireball ~ ~1 ~ {Motion:[0.0d,-1.0d,0.0d]}
-execute if score $rt_climate_factor rt_climat_factor matches 501.. if predicate real_timber:90percentchance run summon minecraft:small_fireball ~ ~1 ~ {Motion:[0.0d,-1.0d,0.0d]}
+execute if score $rt_climate_factor rt_climat_factor matches 120..250 if predicate real_timber:10percentchance run summon minecraft:small_fireball ~ ~2.1 ~ {Motion:[0.0d,-1.0d,0.0d]}
+execute if score $rt_climate_factor rt_climat_factor matches 251..500 if predicate real_timber:30percentchance run summon minecraft:small_fireball ~ ~2.1 ~ {Motion:[0.0d,-1.0d,0.0d]}
+execute if score $rt_climate_factor rt_climat_factor matches 501.. if predicate real_timber:90percentchance run summon minecraft:small_fireball ~ ~2.1 ~ {Motion:[0.0d,-1.0d,0.0d]}

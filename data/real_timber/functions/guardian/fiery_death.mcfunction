@@ -12,5 +12,5 @@ playsound minecraft:block.fire.ambient hostile @a ~ ~ ~ 100
 playsound minecraft:block.fire.ambient hostile @a ~ ~ ~ 100
 playsound minecraft:block.fire.ambient hostile @a ~ ~ ~ 100
 playsound minecraft:block.fire.ambient hostile @a ~ ~ ~ 100
-playsound minecraft:entity.phantom.death hostile @a ~ ~ ~ 1 0.01
-playsound minecraft:entity.phantom.death hostile @a ~ ~ ~ 1 0.01
+
+loot spawn ~ ~ ~ loot real_timber:spirit_axe

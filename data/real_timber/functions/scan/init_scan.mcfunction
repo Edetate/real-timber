@@ -28,3 +28,5 @@ execute unless score $TAKE_HUNGER rt_boolean matches 2 if score $blocks_scanned 
 execute unless score $TAKE_HUNGER rt_boolean matches 2 if score $blocks_scanned rt_scan_limit matches 101..160 run effect give @s minecraft:hunger 1 200
 execute unless score $TAKE_HUNGER rt_boolean matches 2 if score $blocks_scanned rt_scan_limit matches 160..500 run effect give @s minecraft:hunger 2 200
 execute unless score $TAKE_HUNGER rt_boolean matches 2 if score $blocks_scanned rt_scan_limit matches 501.. run effect give @s minecraft:hunger 5 255
+
+execute if data entity @s SelectedItem.tag.autoPlant run function real_timber:autoplant/init_autoplant
