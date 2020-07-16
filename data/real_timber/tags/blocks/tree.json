@@ -1,6 +1,7 @@
 {
   "values": [
     "#minecraft:leaves",
-    "#minecraft:logs"
+    "#minecraft:logs",
+    "#real_timber:tree_1_16"
   ]
 }

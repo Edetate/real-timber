@@ -21,6 +21,11 @@ execute if score @s rt_strip_jungle matches 1.. run scoreboard players set $this
 execute if score @s rt_darkoak matches 1.. run scoreboard players set $this_tree_type rt_tree_type 6
 execute if score @s rt_strip_darkoak matches 1.. run scoreboard players set $this_tree_type rt_tree_type 6
 
+execute if score @s rt_crim_stem matches 1.. run scoreboard players set $this_tree_type rt_tree_type 7
+execute if score @s rt_strip_crim matches 1.. run scoreboard players set $this_tree_type rt_tree_type 7
+execute if score @s rt_warp_stem matches 1.. run scoreboard players set $this_tree_type rt_tree_type 8
+execute if score @s rt_strip_warp matches 1.. run scoreboard players set $this_tree_type rt_tree_type 8
+
 
 scoreboard players set @s rt_oak 0
 scoreboard players set @s rt_strip_oak 0
@@ -34,6 +39,11 @@ scoreboard players set @s rt_jungle 0
 scoreboard players set @s rt_strip_jungle 0
 scoreboard players set @s rt_darkoak 0
 scoreboard players set @s rt_strip_darkoak 0
+
+scoreboard players set @s rt_crim_stem 0
+scoreboard players set @s rt_strip_crim 0
+scoreboard players set @s rt_warp_stem 0
+scoreboard players set @s rt_strip_warp 0
 
 scoreboard players set $ray_scan rt_scan_limit 0
 scoreboard players operation @s rt_boolean = $REQUIRE_SNEAKING rt_boolean

@@ -1,0 +1,5 @@
+
+scoreboard objectives add rt_crim_stem minecraft.mined:minecraft.crimson_stem
+scoreboard objectives add rt_strip_crim minecraft.mined:minecraft.stripped_crimson_stem
+scoreboard objectives add rt_warp_stem minecraft.mined:minecraft.warped_stem
+scoreboard objectives add rt_strip_warp minecraft.mined:minecraft.stripped_warped_stem

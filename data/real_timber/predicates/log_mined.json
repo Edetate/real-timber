@@ -84,6 +84,34 @@
       "scores": {
         "rt_strip_darkoak": 1
       }
+    },
+    {
+      "condition": "minecraft:entity_scores",
+      "entity": "this",
+      "scores": {
+        "rt_crim_stem": 1
+      }
+    },
+    {
+      "condition": "minecraft:entity_scores",
+      "entity": "this",
+      "scores": {
+        "rt_strip_crim": 1
+      }
+    },
+    {
+      "condition": "minecraft:entity_scores",
+      "entity": "this",
+      "scores": {
+        "rt_warp_stem": 1
+      }
+    },
+    {
+      "condition": "minecraft:entity_scores",
+      "entity": "this",
+      "scores": {
+        "rt_strip_warp": 1
+      }
     }
   ]
 }
