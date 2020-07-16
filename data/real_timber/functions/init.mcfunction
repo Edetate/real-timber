@@ -10,16 +10,26 @@ scoreboard objectives add rt_constants dummy
 scoreboard objectives add rt_tree_type dummy
 scoreboard objectives add rt_oak minecraft.mined:minecraft.oak_log
 scoreboard objectives add rt_strip_oak minecraft.mined:minecraft.stripped_oak_log
+scoreboard objectives add rt_darkoak minecraft.mined:minecraft.dark_oak_log
+scoreboard objectives add rt_strip_darkoak minecraft.mined:minecraft.stripped_dark_oak_log
+scoreboard objectives add rt_birch minecraft.mined:minecraft.birch_log
+scoreboard objectives add rt_strip_birch minecraft.mined:minecraft.stripped_birch_log
 scoreboard objectives add rt_spruce minecraft.mined:minecraft.spruce_log
 scoreboard objectives add rt_strip_spruce minecraft.mined:minecraft.stripped_spruce_log
 scoreboard objectives add rt_acacia minecraft.mined:minecraft.acacia_log
 scoreboard objectives add rt_strip_acacia minecraft.mined:minecraft.stripped_acacia_log
-scoreboard objectives add rt_birch minecraft.mined:minecraft.birch_log
-scoreboard objectives add rt_strip_birch minecraft.mined:minecraft.stripped_birch_log
 scoreboard objectives add rt_jungle minecraft.mined:minecraft.jungle_log
 scoreboard objectives add rt_strip_jungle minecraft.mined:minecraft.stripped_jungle_log
-scoreboard objectives add rt_darkoak minecraft.mined:minecraft.dark_oak_log
-scoreboard objectives add rt_strip_darkoak minecraft.mined:minecraft.stripped_dark_oak_log
+
+
+scoreboard objectives add rt_oak_sapl minecraft.used:minecraft.oak_sapling
+scoreboard objectives add rt_darkoak_sapl minecraft.used:minecraft.dark_oak_sapling
+scoreboard objectives add rt_birch_sapl minecraft.used:minecraft.birch_sapling
+scoreboard objectives add rt_spruce_sapl minecraft.used:minecraft.spruce_sapling
+scoreboard objectives add rt_acacia_sapl minecraft.used:minecraft.acacia_sapling
+scoreboard objectives add rt_jungle_sapl minecraft.used:minecraft.jungle_sapling
+
+scoreboard objectives add rt_sapling_count dummy
 
 function real_timber:init_1_16
 

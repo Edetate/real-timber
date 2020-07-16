@@ -1,3 +1,13 @@
+execute unless score $this_tree_type rt_tree_type matches 5..6 run scoreboard players set $max_x_div rt_scan_limit 3
+execute if score $this_tree_type rt_tree_type matches 5..6 run scoreboard players set $max_x_div rt_scan_limit 8
+scoreboard players operation $max_z_div rt_scan_limit = $max_x_div rt_scan_limit
+
+scoreboard players set $min_x_div rt_scan_limit 0
+scoreboard players set $min_z_div rt_scan_limit 0
+scoreboard players operation $min_x_div rt_scan_limit -= $max_x_div rt_scan_limit
+scoreboard players operation $min_z_div rt_scan_limit -= $max_z_div rt_scan_limit
+
+
 scoreboard players set $blocks_scanned rt_scan_limit 0
 scoreboard players add $id_pool rt_build_id 1
 scoreboard players operation @s rt_build_id = $id_pool rt_build_id
