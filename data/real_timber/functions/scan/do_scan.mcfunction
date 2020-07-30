@@ -26,7 +26,5 @@ execute unless score $blocks_scanned rt_scan_limit > $MAX_NUMBER_OF_BLOCKS_ANIMA
 
 #junle trees and accia trees can have some blocks that are connected only diagonally upwards
 execute if score $this_tree_type rt_tree_type matches 5..6 unless score $blocks_scanned rt_scan_limit = $MAX_NUMBER_OF_BLOCKS_ANIMATED rt_scan_limit run function real_timber:scan/do_scan_diag
-#nether trees can have some blocks that are connected only diagonally downwards
-execute if score $this_tree_type rt_tree_type matches 7..8 unless score $blocks_scanned rt_scan_limit = $MAX_NUMBER_OF_BLOCKS_ANIMATED rt_scan_limit run function real_timber:scan/do_scan_diag_down
 
 execute if score $blocks_scanned rt_scan_limit > $MAX_NUMBER_OF_BLOCKS_ANIMATED rt_scan_limit unless score $blocks_scanned rt_scan_limit > $MAX_NUMBER_OF_BLOCKS_HARVESTED rt_scan_limit as @a if score @s rt_build_id = $id_pool rt_build_id run function real_timber:scan/harvest_all
