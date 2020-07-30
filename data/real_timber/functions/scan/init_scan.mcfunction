@@ -1,4 +1,4 @@
-execute unless score $this_tree_type rt_tree_type matches 5..6 run scoreboard players set $max_x_div rt_scan_limit 3
+execute unless score $this_tree_type rt_tree_type matches 5..6 run scoreboard players set $max_x_div rt_scan_limit 4
 execute if score $this_tree_type rt_tree_type matches 5..6 run scoreboard players set $max_x_div rt_scan_limit 8
 scoreboard players operation $max_z_div rt_scan_limit = $max_x_div rt_scan_limit
 
