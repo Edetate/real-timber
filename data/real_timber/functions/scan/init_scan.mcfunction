@@ -1,11 +1,19 @@
-execute unless score $this_tree_type rt_tree_type matches 5..6 run scoreboard players set $max_x_div rt_scan_limit 3
-execute if score $this_tree_type rt_tree_type matches 5..6 run scoreboard players set $max_x_div rt_scan_limit 8
-scoreboard players operation $max_z_div rt_scan_limit = $max_x_div rt_scan_limit
+#default scan width is 3
+execute run scoreboard players set $max_x_div rt_scan_limit 3
+#acacia
+execute if score $this_tree_type rt_tree_type matches 5 run scoreboard players set $max_x_div rt_scan_limit 7
+#spruce
+execute if score $this_tree_type rt_tree_type matches 1 run scoreboard players set $max_x_div rt_scan_limit 4
+#dark oak
+execute if score $this_tree_type rt_tree_type matches 3 run scoreboard players set $max_x_div rt_scan_limit 6
+#oak (can be big and we don't know upfront)
+execute if score $this_tree_type rt_tree_type matches 4 run scoreboard players set $max_x_div rt_scan_limit 4
+#broad jungle
+execute if score $this_tree_type rt_tree_type matches 6 if predicate real_timber:broad_tree run scoreboard players set $max_x_div rt_scan_limit 8
+#broad spruce
+execute if score $this_tree_type rt_tree_type matches 1 if predicate real_timber:broad_tree run scoreboard players set $max_x_div rt_scan_limit 5
 
-scoreboard players set $min_x_div rt_scan_limit 0
-scoreboard players set $min_z_div rt_scan_limit 0
-scoreboard players operation $min_x_div rt_scan_limit -= $max_x_div rt_scan_limit
-scoreboard players operation $min_z_div rt_scan_limit -= $max_z_div rt_scan_limit
+function real_timber:scan/set_scan_width
 
 execute unless score $CLIMATE_CHANGE rt_boolean matches 2 at @s run function real_timber:climate_change/calculate
 
@@ -19,7 +27,9 @@ scoreboard players set $current_z_div rt_scan_limit 0
 summon minecraft:armor_stand ~ ~ ~ {NoGravity:1,Marker:0b,Silent:1b,Invulnerable:1b,Tags:[edta_real_timber,center],Invisible:1b,ArmorItems:[{},{},{},{}],Pose:{Head:[0.01f,0.01f,0.01f]},DisabledSlots:2039583}
 
 data modify entity @e[type=armor_stand,tag=edta_real_timber,tag=!idgiven,tag=center,limit=1] ArmorItems[3] set from entity @e[type=minecraft:item,sort=nearest,limit=1] Item
-execute as @e[type=armor_stand,tag=edta_real_timber,tag=!idgiven,tag=center,limit=1] at @s run function real_timber:scan/do_scan
+execute as @e[type=armor_stand,tag=edta_real_timber,tag=!idgiven,tag=center,limit=1] at @s run function real_timber:scan/start_scan
+
+execute as @e[type=armor_stand,tag=edta_real_timber,tag=real_timber_leave,sort=furthest] at @s run function real_timber:scan/leaves/do_scan
 
 execute as @e[type=armor_stand,tag=edta_real_timber,tag=center,tag=!falling] if score @s rt_build_id = $id_pool rt_build_id at @s run function real_timber:fall/start_falling
 
