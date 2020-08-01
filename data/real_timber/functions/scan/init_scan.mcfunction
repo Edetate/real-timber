@@ -6,7 +6,8 @@ execute if score $this_tree_type rt_tree_type matches 5 run scoreboard players s
 execute if score $this_tree_type rt_tree_type matches 1 run scoreboard players set $max_x_div rt_scan_limit 4
 #dark oak
 execute if score $this_tree_type rt_tree_type matches 3 run scoreboard players set $max_x_div rt_scan_limit 6
-
+#nether trees
+execute if score $this_tree_type rt_tree_type matches 7..8 run scoreboard players set $max_x_div rt_scan_limit 3
 #broad jungle
 execute if score $this_tree_type rt_tree_type matches 6 if predicate real_timber:broad_tree run scoreboard players set $max_x_div rt_scan_limit 8
 #broad spruce
@@ -29,6 +30,8 @@ data modify entity @e[type=armor_stand,tag=edta_real_timber,tag=!idgiven,tag=cen
 execute as @e[type=armor_stand,tag=edta_real_timber,tag=!idgiven,tag=center,limit=1] at @s run function real_timber:scan/start_scan
 
 execute unless score $SCAN_ALL_LEAVES rt_boolean matches 2 as @e[type=armor_stand,tag=edta_real_timber,tag=real_timber_leave,sort=furthest] at @s run function real_timber:scan/leaves/do_scan
+#for nether trees we always want the 'leaves' gone since they don't despawn
+execute if score $SCAN_ALL_LEAVES rt_boolean matches 2 if score $this_tree_type rt_tree_type matches 7..8 as @e[type=armor_stand,tag=edta_real_timber,tag=real_timber_leave,sort=furthest] at @s run function real_timber:scan/leaves/do_scan
 
 execute as @e[type=armor_stand,tag=edta_real_timber,tag=center,tag=!falling] if score @s rt_build_id = $id_pool rt_build_id at @s run function real_timber:fall/start_falling
 
