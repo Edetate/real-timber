@@ -1,0 +1,89 @@
+{
+  "condition": "minecraft:alternative",
+  "terms": [
+    {
+      "condition": "minecraft:location_check",
+      "offsetY": 1,
+      "offsetZ": 1,
+      "predicate": {
+        "block": {
+          "tag": "minecraft:logs"
+        }
+      }
+    },
+    {
+      "condition": "minecraft:location_check",
+      "offsetY": 1,
+      "offsetZ": -1,
+      "predicate": {
+        "block": {
+          "tag": "minecraft:logs"
+        }
+      }
+    },
+    {
+      "condition": "minecraft:location_check",
+      "offsetX": 1,
+      "offsetY": 1,
+      "predicate": {
+        "block": {
+          "tag": "minecraft:logs"
+        }
+      }
+    },
+    {
+      "condition": "minecraft:location_check",
+      "offsetY": 1,
+      "offsetX": 1,
+      "offsetZ": 1,
+      "predicate": {
+        "block": {
+          "tag": "minecraft:logs"
+        }
+      }
+    },
+    {
+      "condition": "minecraft:location_check",
+      "offsetY": 1,
+      "offsetX": 1,
+      "offsetZ": -1,
+      "predicate": {
+        "block": {
+          "tag": "minecraft:logs"
+        }
+      }
+    },
+    {
+      "condition": "minecraft:location_check",
+      "offsetX": -1,
+      "offsetY": 1,
+      "predicate": {
+        "block": {
+          "tag": "minecraft:logs"
+        }
+      }
+    },
+    {
+      "condition": "minecraft:location_check",
+      "offsetY": 1,
+      "offsetX": -1,
+      "offsetZ": 1,
+      "predicate": {
+        "block": {
+          "tag": "minecraft:logs"
+        }
+      }
+    },
+    {
+      "condition": "minecraft:location_check",
+      "offsetY": 1,
+      "offsetX": -1,
+      "offsetZ": -1,
+      "predicate": {
+        "block": {
+          "tag": "minecraft:logs"
+        }
+      }
+    }
+  ]
+}
