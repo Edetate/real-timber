@@ -6,8 +6,8 @@ execute if score $this_tree_type rt_tree_type matches 5 run scoreboard players s
 execute if score $this_tree_type rt_tree_type matches 1 run scoreboard players set $max_x_div rt_scan_limit 4
 #dark oak
 execute if score $this_tree_type rt_tree_type matches 3 run scoreboard players set $max_x_div rt_scan_limit 6
-#nether trees
-execute if score $this_tree_type rt_tree_type matches 7..8 run scoreboard players set $max_x_div rt_scan_limit 3
+#nether trees and jungle trees
+execute if score $this_tree_type rt_tree_type matches 6..8 run scoreboard players set $max_x_div rt_scan_limit 3
 #broad jungle
 execute if score $this_tree_type rt_tree_type matches 6 if predicate real_timber:broad_tree run scoreboard players set $max_x_div rt_scan_limit 8
 #broad spruce
