@@ -8,4 +8,3 @@ summon minecraft:area_effect_cloud ~ ~ ~ {Tags:[edta_real_timber, block_scanned]
 setblock ~ ~ ~ air replace
 scoreboard players operation @s rt_parent_id = $parent_id rt_part_id
 scoreboard players operation @s rt_build_side = $coming_from_side rt_build_side
-

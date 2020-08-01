@@ -1,13 +1,12 @@
-#default scan width is 3
-execute run scoreboard players set $max_x_div rt_scan_limit 3
+#default scan width is 2
+execute run scoreboard players set $max_x_div rt_scan_limit 2
 #acacia
 execute if score $this_tree_type rt_tree_type matches 5 run scoreboard players set $max_x_div rt_scan_limit 7
 #spruce
 execute if score $this_tree_type rt_tree_type matches 1 run scoreboard players set $max_x_div rt_scan_limit 4
 #dark oak
 execute if score $this_tree_type rt_tree_type matches 3 run scoreboard players set $max_x_div rt_scan_limit 6
-#oak (can be big and we don't know upfront)
-execute if score $this_tree_type rt_tree_type matches 4 run scoreboard players set $max_x_div rt_scan_limit 4
+
 #broad jungle
 execute if score $this_tree_type rt_tree_type matches 6 if predicate real_timber:broad_tree run scoreboard players set $max_x_div rt_scan_limit 8
 #broad spruce
@@ -29,7 +28,7 @@ summon minecraft:armor_stand ~ ~ ~ {NoGravity:1,Marker:0b,Silent:1b,Invulnerable
 data modify entity @e[type=armor_stand,tag=edta_real_timber,tag=!idgiven,tag=center,limit=1] ArmorItems[3] set from entity @e[type=minecraft:item,sort=nearest,limit=1] Item
 execute as @e[type=armor_stand,tag=edta_real_timber,tag=!idgiven,tag=center,limit=1] at @s run function real_timber:scan/start_scan
 
-execute as @e[type=armor_stand,tag=edta_real_timber,tag=real_timber_leave,sort=furthest] at @s run function real_timber:scan/leaves/do_scan
+execute unless score $SCAN_ALL_LEAVES rt_boolean matches 2 as @e[type=armor_stand,tag=edta_real_timber,tag=real_timber_leave,sort=furthest] at @s run function real_timber:scan/leaves/do_scan
 
 execute as @e[type=armor_stand,tag=edta_real_timber,tag=center,tag=!falling] if score @s rt_build_id = $id_pool rt_build_id at @s run function real_timber:fall/start_falling
 

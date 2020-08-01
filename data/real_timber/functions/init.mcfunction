@@ -53,6 +53,7 @@ execute unless score $REQUIRE_SNEAKING rt_boolean matches 1.. run scoreboard pla
 execute unless score $TAKE_HUNGER rt_boolean matches 1.. run scoreboard players set $TAKE_HUNGER rt_boolean 1
 execute unless score $DO_SPIRITS rt_boolean matches 1.. run scoreboard players set $DO_SPIRITS rt_boolean 1
 execute unless score $CLIMATE_CHANGE rt_boolean matches 1.. run scoreboard players set $CLIMATE_CHANGE rt_boolean 1
+execute unless score $SCAN_ALL_LEAVES rt_boolean matches 1.. run scoreboard players set $SCAN_ALL_LEAVES rt_boolean 1
 
 #maxCommandChainLength should be at least $MAX_NUMBER_OF_BLOCKS_ANIMATED * 50
 gamerule maxCommandChainLength 70000
