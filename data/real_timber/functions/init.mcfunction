@@ -41,7 +41,7 @@ scoreboard objectives add rt_dy dummy
 scoreboard objectives add rt_dz dummy
 data merge storage edta_rt_storage {launchMotion:[0.0,0.0,0.0]}
 
-tellraw @a [{"text":"EDTA's Real Timber datapack loaded. Beta v0.5. To use: hold sneak while cutting a tree.","color":"dark_green"},{"text":"  [Options]","color":"dark_green","bold":true,"clickEvent":{"action":"run_command","value":"/function real_timber:options"}}]
+tellraw @a [{"text":"EDTA's Real Timber datapack loaded. Beta v1.0. To use: hold sneak while cutting a tree.","color":"dark_green"},{"text":"  [Options]","color":"dark_green","bold":true,"clickEvent":{"action":"run_command","value":"/function real_timber:options"}}]
 
 #set the maximum amount of blocks in a build below. 200 still works fluently on my computer for 1 build, but more becomes choppy
 execute unless score $MAX_NUMBER_OF_BLOCKS_ANIMATED rt_scan_limit matches 1.. run scoreboard players set $MAX_NUMBER_OF_BLOCKS_ANIMATED rt_scan_limit 200
